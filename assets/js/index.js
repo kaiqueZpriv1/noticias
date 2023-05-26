@@ -20,9 +20,15 @@ fetch(
     const linkBtn = document.createElement("a");
 
     imageElement.src = article.urlToImage;
-    imageElement.alt = article.urlToImage;
+    imageElement.alt = "erro ao carregar a imagem";
+    // imagem style
+    imageElement.style.width = "300px"
+    imageElement.style.textAlign = "center"
+    imageElement.style.height = "199px"
+    // push
     titleElement.innerText = article.title;
     linkBtn.href = article.url;
+    linkBtn.target = "_blank"
     linkBtn.textContent = "Acessar noticia"
 
     boxElement.classList.add("box-noticia");
@@ -44,27 +50,6 @@ fetch(
     noticiaelement.appendChild(boxElement);
   })
 })
-// .then((data) => {
-//   // Acessando os elementos retornados na resposta da API
-//   const articles = data.articles;
-//   console.log(articles);
-//   // exibindo elemento na tela
-//   articles.forEach((article) => {
-//     const imageElement = document.querySelector("#image");
-//     const titleElement = document.querySelector("#title");
-//     const descricaoElement = document.querySelector("#descricao");
-//     const authorElement = document.querySelector("#author");
-//     const publishElement = document.querySelector("#data-publicacao");
-//     const linkBtn = document.querySelector("#acesso-new");
-
-//     imageElement.src = article.urlToImage;
-//     titleElement.innerText = article.title;
-//     descricaoElement.innerText = article.description;
-//     authorElement.innerText = article.author;
-//     publishElement.innerText = article.publishedAt;
-//     linkBtn.href = article.url;
-//   });
-// })
 .catch((error) => {
   console.error("Ocorreu um erro:", error);
 });
