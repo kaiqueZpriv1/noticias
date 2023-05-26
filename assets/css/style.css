@@ -16,9 +16,9 @@ a{
 /* estilização header */
 .text-main{
     text-align: center;
-        font-size: 7vw;
-        margin: 50px 0;
-        font-family: "Courier";
+    font-size: 7vw;
+    margin: 50px 0;
+    font-family: "Courier";
 }
 /* main */
 .container-main{
@@ -106,6 +106,7 @@ a{
 .menu-desktop{
     display: none;
 }
+
 @media (min-width: 728px) and (max-width: 1366px) {
     body{
         background: url(https://img.freepik.com/fotos-gratis/textura-branca_1160-786.jpg?w=826&t=st=1685129390~exp=1685129990~hmac=3f4fcf4635a92ba3b6c9bb2e7325b81efe78f743644bd304857c422e97cb7ad2);
@@ -162,6 +163,14 @@ a{
         margin: 15px;
     }
     .link-noticia{
+        font-size: 1.5vw;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .footer-text{
+        text-align: center;
+        background-color: rgb(214, 214, 214);
         font-size: 1.5vw;
     }
 }
